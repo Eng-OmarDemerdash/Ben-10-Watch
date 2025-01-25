@@ -1,0 +1,574 @@
+Component: Arm Compiler for Embedded 6.22 Tool: armlink [5ee90200]
+
+==============================================================================
+
+Section Cross References
+
+    tft.o(MYDATA) refers (Special) to screens_draws.o(SCREENDRAWS) for BOX_EXPANSION
+    tft.o(MYDATA) refers (Special) to draws.o(DRAWS) for COUNTER
+    tft.o(MYDATA) refers (Special) to omnitext.o(SCREENDRAWS) for DRAW_INTRO_SCREEN
+    tft.o(MYDATA) refers (Special) to tempandhum.o(TEMPANDHUM) for GET_TEMPRATURE_AND_HUMIDITY_VALUE
+    tft.o(MYDATA) refers (Special) to buttons.o(BUTTONS) for READ_BUTTONS
+    tft.o(MYDATA) refers (Special) to snakegame.o(SNAKE_CODE) for SNAKE_GAME
+    tft.o(MYCODE) refers (Special) to screens_draws.o(SCREENDRAWS) for BOX_EXPANSION
+    tft.o(MYCODE) refers (Special) to draws.o(DRAWS) for COUNTER
+    tft.o(MYCODE) refers (Special) to omnitext.o(SCREENDRAWS) for DRAW_INTRO_SCREEN
+    tft.o(MYCODE) refers (Special) to tempandhum.o(TEMPANDHUM) for GET_TEMPRATURE_AND_HUMIDITY_VALUE
+    tft.o(MYCODE) refers (Special) to buttons.o(BUTTONS) for READ_BUTTONS
+    tft.o(MYCODE) refers (Special) to snakegame.o(SNAKE_CODE) for SNAKE_GAME
+    tft.o(MYCODE) refers to integration.o(INTEGRATION) for HELLO_SCREEN
+    draws.o(MYDATA) refers (Special) to bitmap_partone.o(CharacterBitmaps1) for CharA
+    draws.o(MYDATA) refers (Special) to bitmap_parttwo.o(CharacterBitmaps2) for CharS
+    draws.o(MYDATA) refers (Special) to screens_draws.o(SCREENDRAWS) for DRAW_HOME_SCREEN
+    draws.o(MYDATA) refers (Special) to iconsbitmap.o(IconsBitmaps) for HomeIcon
+    draws.o(MYDATA) refers (Special) to tft.o(MYCODE) for LCD_WRITE
+    draws.o(DRAWS) refers (Special) to bitmap_partone.o(CharacterBitmaps1) for CharA
+    draws.o(DRAWS) refers (Special) to bitmap_parttwo.o(CharacterBitmaps2) for CharS
+    draws.o(DRAWS) refers (Special) to screens_draws.o(SCREENDRAWS) for DRAW_HOME_SCREEN
+    draws.o(DRAWS) refers (Special) to iconsbitmap.o(IconsBitmaps) for HomeIcon
+    draws.o(DRAWS) refers (Special) to tft.o(MYCODE) for LCD_WRITE
+    snakegame.o(SNAKE_CODE) refers to draws.o(DRAWS) for DRAW_RECTANGLE_FILLED
+    snakegame.o(SNAKE_CODE) refers to tft.o(MYCODE) for delay_half_second
+    snakegame.o(SNAKE_CODE) refers to buttons.o(BUTTONS) for READ_BUTTONS
+    integration.o(INTEGRATION) refers to omnitext.o(SCREENDRAWS) for DRAW_INTRO_SCREEN
+    integration.o(INTEGRATION) refers to screens_draws.o(SCREENDRAWS) for BOX_EXPANSION
+    integration.o(INTEGRATION) refers to buttons.o(BUTTONS) for GET_READINGS
+    integration.o(INTEGRATION) refers to draws.o(DRAWS) for DRAW_RECTANGLE_FILLED
+    integration.o(INTEGRATION) refers to snakegame.o(SNAKE_CODE) for SNAKE_GAME
+    integration.o(INTEGRATION) refers to snakehigherlevel.o(SNAKE_CODE) for SNAKE_GAME_HIGHER_LEVEL
+    integration.o(INTEGRATION) refers to tempandhum.o(TEMPANDHUM) for GET_TEMPRATURE_AND_HUMIDITY_VALUE
+    integration.o(INTEGRATION) refers to iconstwo.o(MYDATA) for UpArrow
+    screens_draws.o(MYDATA) refers (Special) to bitmap_parttwo.o(CharacterBitmaps2) for Char1
+    screens_draws.o(MYDATA) refers (Special) to bitmap_partone.o(CharacterBitmaps1) for CharA
+    screens_draws.o(MYDATA) refers (Special) to omnitext.o(SCREENDRAWS) for DRAW_INTRO_SCREEN
+    screens_draws.o(MYDATA) refers (Special) to draws.o(DRAWS) for DRAW_NUMBERS
+    screens_draws.o(SCREENDRAWS) refers (Special) to bitmap_parttwo.o(CharacterBitmaps2) for Char1
+    screens_draws.o(SCREENDRAWS) refers (Special) to bitmap_partone.o(CharacterBitmaps1) for CharA
+    screens_draws.o(SCREENDRAWS) refers (Special) to omnitext.o(SCREENDRAWS) for DRAW_INTRO_SCREEN
+    screens_draws.o(SCREENDRAWS) refers (Special) to draws.o(DRAWS) for DRAW_NUMBERS
+    screens_draws.o(SCREENDRAWS) refers to tft.o(MYCODE) for delay_1_second
+    screens_draws.o(SCREENDRAWS) refers to stopwatchscreen.o(SCREENDRAWS) for DRAW_STOPWATCH_SCREEN
+    screens_draws.o(SCREENDRAWS) refers to alarmscreen.o(SCREENDRAWS) for DRAW_ALARM_SCREEN
+    screens_draws.o(SCREENDRAWS) refers to themes.o(SCREENDRAWS) for DRAW_THEMES_SCREEN
+    screens_draws.o(SCREENDRAWS) refers to games.o(SCREENDRAWS) for DRAW_GAME_SCREEN
+    screens_draws.o(SCREENDRAWS) refers to iconsbitmap.o(IconsBitmaps) for SunIcon
+    screens_draws.o(SCREENDRAWS) refers to iconstwo.o(MYDATA) for Stopwatch
+    stopwatchscreen.o(MYDATA) refers (Special) to bitmap_parttwo.o(CharacterBitmaps2) for Char1
+    stopwatchscreen.o(MYDATA) refers (Special) to bitmap_partone.o(CharacterBitmaps1) for CharC
+    stopwatchscreen.o(MYDATA) refers (Special) to draws.o(DRAWS) for DRAW_DIGIT_PAIR
+    stopwatchscreen.o(MYDATA) refers (Special) to iconsbitmap.o(IconsBitmaps) for DropIcon
+    stopwatchscreen.o(MYDATA) refers (Special) to iconstwo.o(MYDATA) for Stopwatch
+    stopwatchscreen.o(MYDATA) refers (Special) to tft.o(MYCODE) for delay_1_second
+    stopwatchscreen.o(SCREENDRAWS) refers (Special) to bitmap_parttwo.o(CharacterBitmaps2) for Char1
+    stopwatchscreen.o(SCREENDRAWS) refers (Special) to bitmap_partone.o(CharacterBitmaps1) for CharC
+    stopwatchscreen.o(SCREENDRAWS) refers (Special) to draws.o(DRAWS) for DRAW_DIGIT_PAIR
+    stopwatchscreen.o(SCREENDRAWS) refers (Special) to iconsbitmap.o(IconsBitmaps) for DropIcon
+    stopwatchscreen.o(SCREENDRAWS) refers (Special) to iconstwo.o(MYDATA) for Stopwatch
+    stopwatchscreen.o(SCREENDRAWS) refers (Special) to tft.o(MYCODE) for delay_1_second
+    themes.o(MYDATA) refers (Special) to bitmap_parttwo.o(CharacterBitmaps2) for Char0
+    themes.o(MYDATA) refers (Special) to bitmap_partone.o(CharacterBitmaps1) for CharA
+    themes.o(MYDATA) refers (Special) to draws.o(DRAWS) for DRAW_CHAR_I
+    themes.o(MYDATA) refers (Special) to iconsbitmap.o(IconsBitmaps) for DropIcon
+    themes.o(MYDATA) refers (Special) to iconstwo.o(MYDATA) for Stopwatch
+    themes.o(MYDATA) refers (Special) to tft.o(MYCODE) for delay_1_second
+    themes.o(SCREENDRAWS) refers (Special) to bitmap_parttwo.o(CharacterBitmaps2) for Char0
+    themes.o(SCREENDRAWS) refers (Special) to bitmap_partone.o(CharacterBitmaps1) for CharA
+    themes.o(SCREENDRAWS) refers (Special) to draws.o(DRAWS) for DRAW_CHAR_I
+    themes.o(SCREENDRAWS) refers (Special) to iconsbitmap.o(IconsBitmaps) for DropIcon
+    themes.o(SCREENDRAWS) refers (Special) to iconstwo.o(MYDATA) for Stopwatch
+    themes.o(SCREENDRAWS) refers (Special) to tft.o(MYCODE) for delay_1_second
+    alarmscreen.o(MYDATA) refers (Special) to bitmap_parttwo.o(CharacterBitmaps2) for Char1
+    alarmscreen.o(MYDATA) refers (Special) to bitmap_partone.o(CharacterBitmaps1) for CharC
+    alarmscreen.o(MYDATA) refers (Special) to draws.o(DRAWS) for DRAW_CHAR_I
+    alarmscreen.o(MYDATA) refers (Special) to iconsbitmap.o(IconsBitmaps) for DropIcon
+    alarmscreen.o(MYDATA) refers (Special) to iconstwo.o(MYDATA) for Stopwatch
+    alarmscreen.o(MYDATA) refers (Special) to tft.o(MYCODE) for delay_1_second
+    alarmscreen.o(SCREENDRAWS) refers (Special) to bitmap_parttwo.o(CharacterBitmaps2) for Char1
+    alarmscreen.o(SCREENDRAWS) refers (Special) to bitmap_partone.o(CharacterBitmaps1) for CharC
+    alarmscreen.o(SCREENDRAWS) refers (Special) to draws.o(DRAWS) for DRAW_CHAR_I
+    alarmscreen.o(SCREENDRAWS) refers (Special) to iconsbitmap.o(IconsBitmaps) for DropIcon
+    alarmscreen.o(SCREENDRAWS) refers (Special) to iconstwo.o(MYDATA) for Stopwatch
+    alarmscreen.o(SCREENDRAWS) refers (Special) to tft.o(MYCODE) for delay_1_second
+    omnitext.o(MYDATA) refers (Special) to bitmap_parttwo.o(CharacterBitmaps2) for Char0
+    omnitext.o(MYDATA) refers (Special) to bitmap_partone.o(CharacterBitmaps1) for CharH
+    omnitext.o(MYDATA) refers (Special) to draws.o(DRAWS) for DRAW_DIGIT_PAIR
+    omnitext.o(MYDATA) refers (Special) to iconsbitmap.o(IconsBitmaps) for DropIcon
+    omnitext.o(MYDATA) refers (Special) to iconstwo.o(MYDATA) for Stopwatch
+    omnitext.o(MYDATA) refers (Special) to tft.o(MYCODE) for delay_1_second
+    omnitext.o(SCREENDRAWS) refers (Special) to bitmap_parttwo.o(CharacterBitmaps2) for Char0
+    omnitext.o(SCREENDRAWS) refers (Special) to bitmap_partone.o(CharacterBitmaps1) for CharH
+    omnitext.o(SCREENDRAWS) refers (Special) to draws.o(DRAWS) for DRAW_DIGIT_PAIR
+    omnitext.o(SCREENDRAWS) refers (Special) to iconsbitmap.o(IconsBitmaps) for DropIcon
+    omnitext.o(SCREENDRAWS) refers (Special) to iconstwo.o(MYDATA) for Stopwatch
+    omnitext.o(SCREENDRAWS) refers (Special) to tft.o(MYCODE) for delay_1_second
+    games.o(MYDATA) refers (Special) to bitmap_parttwo.o(CharacterBitmaps2) for Char0
+    games.o(MYDATA) refers (Special) to bitmap_partone.o(CharacterBitmaps1) for CharC
+    games.o(MYDATA) refers (Special) to iconsbitmap.o(IconsBitmaps) for Controller
+    games.o(MYDATA) refers (Special) to draws.o(DRAWS) for DRAW_CHAR_I
+    games.o(MYDATA) refers (Special) to iconstwo.o(MYDATA) for Stopwatch
+    games.o(MYDATA) refers (Special) to tft.o(MYCODE) for delay_1_second
+    games.o(SCREENDRAWS) refers (Special) to bitmap_parttwo.o(CharacterBitmaps2) for Char0
+    games.o(SCREENDRAWS) refers (Special) to bitmap_partone.o(CharacterBitmaps1) for CharC
+    games.o(SCREENDRAWS) refers (Special) to iconsbitmap.o(IconsBitmaps) for Controller
+    games.o(SCREENDRAWS) refers (Special) to draws.o(DRAWS) for DRAW_CHAR_I
+    games.o(SCREENDRAWS) refers (Special) to iconstwo.o(MYDATA) for Stopwatch
+    games.o(SCREENDRAWS) refers (Special) to tft.o(MYCODE) for delay_1_second
+    snakehigherlevel.o(SNAKE_CODE) refers to draws.o(DRAWS) for DRAW_RECTANGLE_FILLED
+    snakehigherlevel.o(SNAKE_CODE) refers to tft.o(MYCODE) for delay_half_second
+    snakehigherlevel.o(SNAKE_CODE) refers to buttons.o(BUTTONS) for READ_BUTTONS
+    gpio_stm32f10x.o(.ARM.exidx.text.GPIO_PortClock) refers to gpio_stm32f10x.o(.text.GPIO_PortClock) for [Anonymous Symbol]
+    gpio_stm32f10x.o(.ARM.exidx.text.GPIO_GetPortClockState) refers to gpio_stm32f10x.o(.text.GPIO_GetPortClockState) for [Anonymous Symbol]
+    gpio_stm32f10x.o(.text.GPIO_PinConfigure) refers to gpio_stm32f10x.o(.text.GPIO_GetPortClockState) for GPIO_GetPortClockState
+    gpio_stm32f10x.o(.text.GPIO_PinConfigure) refers to gpio_stm32f10x.o(.text.GPIO_PortClock) for GPIO_PortClock
+    gpio_stm32f10x.o(.ARM.exidx.text.GPIO_PinConfigure) refers to gpio_stm32f10x.o(.text.GPIO_PinConfigure) for [Anonymous Symbol]
+    gpio_stm32f10x.o(.ARM.exidx.text.GPIO_AFConfigure) refers to gpio_stm32f10x.o(.text.GPIO_AFConfigure) for [Anonymous Symbol]
+    startup_stm32f10x_md.o(STACK) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f10x_md.o(HEAP) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f10x_md.o(RESET) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f10x_md.o(RESET) refers to startup_stm32f10x_md.o(STACK) for __initial_sp
+    startup_stm32f10x_md.o(RESET) refers to startup_stm32f10x_md.o(.text) for Reset_Handler
+    startup_stm32f10x_md.o(.text) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f10x_md.o(.text) refers to system_stm32f10x.o(.text.SystemInit) for SystemInit
+    startup_stm32f10x_md.o(.text) refers to tft.o(MYCODE) for __main
+    startup_stm32f10x_md.o(.text) refers to startup_stm32f10x_md.o(HEAP) for Heap_Mem
+    startup_stm32f10x_md.o(.text) refers to startup_stm32f10x_md.o(STACK) for Stack_Mem
+    system_stm32f10x.o(.text.SystemInit) refers to system_stm32f10x.o(.text.SetSysClock) for SetSysClock
+    system_stm32f10x.o(.ARM.exidx.text.SystemInit) refers to system_stm32f10x.o(.text.SystemInit) for [Anonymous Symbol]
+    system_stm32f10x.o(.text.SetSysClock) refers to system_stm32f10x.o(.text.SetSysClockTo72) for SetSysClockTo72
+    system_stm32f10x.o(.ARM.exidx.text.SetSysClock) refers to system_stm32f10x.o(.text.SetSysClock) for [Anonymous Symbol]
+    system_stm32f10x.o(.text.SystemCoreClockUpdate) refers to system_stm32f10x.o(.data.SystemCoreClock) for SystemCoreClock
+    system_stm32f10x.o(.text.SystemCoreClockUpdate) refers to system_stm32f10x.o(.rodata.AHBPrescTable) for AHBPrescTable
+    system_stm32f10x.o(.ARM.exidx.text.SystemCoreClockUpdate) refers to system_stm32f10x.o(.text.SystemCoreClockUpdate) for [Anonymous Symbol]
+    system_stm32f10x.o(.ARM.exidx.text.SetSysClockTo72) refers to system_stm32f10x.o(.text.SetSysClockTo72) for [Anonymous Symbol]
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing tft.o(MYDATA), (0 bytes).
+    Removing draws.o(MYDATA), (0 bytes).
+    Removing tft_init.o(DRAWS), (0 bytes).
+    Removing buttons.o(MYDATA), (0 bytes).
+    Removing iremmiter.o(MYDATA), (0 bytes).
+    Removing iremmiter.o(IREMMITER), (0 bytes).
+    Removing rtc.o(MYDATA), (0 bytes).
+    Removing rtc.o(RTC), (152 bytes).
+    Removing snakegame.o(MY_SNAKE_DATA), (0 bytes).
+    Removing integration.o(MYDATA), (0 bytes).
+    Removing tempandhum.o(MYDATA), (0 bytes).
+    Removing screens_draws.o(MYDATA), (0 bytes).
+    Removing stopwatchscreen.o(MYDATA), (0 bytes).
+    Removing themes.o(MYDATA), (0 bytes).
+    Removing alarmscreen.o(MYDATA), (0 bytes).
+    Removing omnitext.o(MYDATA), (0 bytes).
+    Removing games.o(MYDATA), (0 bytes).
+    Removing snakehigherlevel.o(MY_SNAKE_DATA), (0 bytes).
+    Removing gpio_stm32f10x.o(.text), (0 bytes).
+    Removing gpio_stm32f10x.o(.text.GPIO_PortClock), (528 bytes).
+    Removing gpio_stm32f10x.o(.ARM.exidx.text.GPIO_PortClock), (8 bytes).
+    Removing gpio_stm32f10x.o(.text.GPIO_GetPortClockState), (284 bytes).
+    Removing gpio_stm32f10x.o(.ARM.exidx.text.GPIO_GetPortClockState), (8 bytes).
+    Removing gpio_stm32f10x.o(.text.GPIO_PinConfigure), (222 bytes).
+    Removing gpio_stm32f10x.o(.ARM.exidx.text.GPIO_PinConfigure), (8 bytes).
+    Removing gpio_stm32f10x.o(.text.GPIO_AFConfigure), (228 bytes).
+    Removing gpio_stm32f10x.o(.ARM.exidx.text.GPIO_AFConfigure), (8 bytes).
+    Removing system_stm32f10x.o(.text), (0 bytes).
+    Removing system_stm32f10x.o(.ARM.exidx.text.SystemInit), (8 bytes).
+    Removing system_stm32f10x.o(.ARM.exidx.text.SetSysClock), (8 bytes).
+    Removing system_stm32f10x.o(.text.SystemCoreClockUpdate), (290 bytes).
+    Removing system_stm32f10x.o(.ARM.exidx.text.SystemCoreClockUpdate), (8 bytes).
+    Removing system_stm32f10x.o(.ARM.exidx.text.SetSysClockTo72), (8 bytes).
+    Removing system_stm32f10x.o(.data.SystemCoreClock), (4 bytes).
+    Removing system_stm32f10x.o(.rodata.AHBPrescTable), (16 bytes).
+
+35 unused section(s) (total 1788 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/heapaux.c                        0x00000000   Number         0  heapauxi.o ABSOLUTE
+    AlarmSCREEN.s                            0x00000000   Number         0  alarmscreen.o ABSOLUTE
+    DRAWS.s                                  0x00000000   Number         0  draws.o ABSOLUTE
+    GPIO_STM32F10x.c                         0x00000000   Number         0  gpio_stm32f10x.o ABSOLUTE
+    IconsBitmap.s                            0x00000000   Number         0  iconsbitmap.o ABSOLUTE
+    IconsTwo.s                               0x00000000   Number         0  iconstwo.o ABSOLUTE
+    OmniText.s                               0x00000000   Number         0  omnitext.o ABSOLUTE
+    RTE/Device/STM32F103C8/startup_stm32f10x_md.s 0x00000000   Number         0  startup_stm32f10x_md.o ABSOLUTE
+    SCREENS_DRAWS.s                          0x00000000   Number         0  screens_draws.o ABSOLUTE
+    SnakeHigherLevel.s                       0x00000000   Number         0  snakehigherlevel.o ABSOLUTE
+    StopWatchScreen.s                        0x00000000   Number         0  stopwatchscreen.o ABSOLUTE
+    TFT.s                                    0x00000000   Number         0  tft.o ABSOLUTE
+    TFT_INIT.s                               0x00000000   Number         0  tft_init.o ABSOLUTE
+    Themes.s                                 0x00000000   Number         0  themes.o ABSOLUTE
+    bitmap_partOne.s                         0x00000000   Number         0  bitmap_partone.o ABSOLUTE
+    bitmap_partTwo.s                         0x00000000   Number         0  bitmap_parttwo.o ABSOLUTE
+    buttons.s                                0x00000000   Number         0  buttons.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    games.s                                  0x00000000   Number         0  games.o ABSOLUTE
+    integration.s                            0x00000000   Number         0  integration.o ABSOLUTE
+    irEmmiter.s                              0x00000000   Number         0  iremmiter.o ABSOLUTE
+    rtc.s                                    0x00000000   Number         0  rtc.o ABSOLUTE
+    snakeGame.s                              0x00000000   Number         0  snakegame.o ABSOLUTE
+    system_stm32f10x.c                       0x00000000   Number         0  system_stm32f10x.o ABSOLUTE
+    tempAndHum.s                             0x00000000   Number         0  tempandhum.o ABSOLUTE
+    RESET                                    0x08000000   Section      236  startup_stm32f10x_md.o(RESET)
+    .text                                    0x080000ec   Section       64  startup_stm32f10x_md.o(.text)
+    .text                                    0x0800012c   Section        0  heapauxi.o(.text)
+    SetSysClock                              0x08000135   Thumb Code     8  system_stm32f10x.o(.text.SetSysClock)
+    [Anonymous Symbol]                       0x08000134   Section        0  system_stm32f10x.o(.text.SetSysClock)
+    SetSysClockTo72                          0x0800013d   Thumb Code   290  system_stm32f10x.o(.text.SetSysClockTo72)
+    [Anonymous Symbol]                       0x0800013c   Section        0  system_stm32f10x.o(.text.SetSysClockTo72)
+    [Anonymous Symbol]                       0x08000260   Section        0  system_stm32f10x.o(.text.SystemInit)
+    CHECK_LEFT                               0x080002c9   Thumb Code    68  buttons.o(BUTTONS)
+    BUTTONS                                  0x080002c8   Section      864  buttons.o(BUTTONS)
+    CHECK_RIGHT                              0x0800030d   Thumb Code    72  buttons.o(BUTTONS)
+    CHECK_UP                                 0x08000355   Thumb Code    72  buttons.o(BUTTONS)
+    CHECK_DOWN                               0x0800039d   Thumb Code    72  buttons.o(BUTTONS)
+    CHECK_OK                                 0x080003e5   Thumb Code    72  buttons.o(BUTTONS)
+    CHECK_IR_RIGHT_INPUTS                    0x08000593   Thumb Code    34  buttons.o(BUTTONS)
+    CHECK_IR_LEFT_INPUTS                     0x080005b5   Thumb Code    34  buttons.o(BUTTONS)
+    CHECK_IR_UP_INPUTS                       0x080005d7   Thumb Code    34  buttons.o(BUTTONS)
+    CHECK_IR_DOWN_INPUTS                     0x080005f9   Thumb Code    34  buttons.o(BUTTONS)
+    DRAWS                                    0x08000628   Section      964  draws.o(DRAWS)
+    DRAW_LINE_VERTICAL                       0x08000651   Thumb Code    16  draws.o(DRAWS)
+    DRAWPIXEL                                0x080006ad   Thumb Code    24  draws.o(DRAWS)
+    ADDRESS_SET                              0x080006c5   Thumb Code    96  draws.o(DRAWS)
+    INTEGRATION                              0x080009ec   Section      796  integration.o(INTEGRATION)
+    HANDLE_TEMP_SENSOR                       0x08000c8d   Thumb Code   116  integration.o(INTEGRATION)
+    MYCODE                                   0x08000d08   Section      688  tft.o(MYCODE)
+    LCD_INIT                                 0x08000e11   Thumb Code   182  tft.o(MYCODE)
+    SETUP                                    0x08000ec7   Thumb Code   122  tft.o(MYCODE)
+    SCREENDRAWS                              0x08000fb8   Section     1164  screens_draws.o(SCREENDRAWS)
+    DRAW_RHOMBUS                             0x080010d9   Thumb Code   128  screens_draws.o(SCREENDRAWS)
+    DRAW_CLOCK_PART                          0x08001159   Thumb Code   170  screens_draws.o(SCREENDRAWS)
+    DRAW_HOME_INTERFACE                      0x08001203   Thumb Code    48  screens_draws.o(SCREENDRAWS)
+    DRAW_HERO_TIME                           0x08001233   Thumb Code   224  screens_draws.o(SCREENDRAWS)
+    DRAW_OVERLAY_SCREEN                      0x08001323   Thumb Code    56  screens_draws.o(SCREENDRAWS)
+    STOPWATCH_TEXT                           0x08001445   Thumb Code    78  stopwatchscreen.o(SCREENDRAWS)
+    SCREENDRAWS                              0x08001444   Section      528  stopwatchscreen.o(SCREENDRAWS)
+    STOPWATCH_TIMER                          0x08001493   Thumb Code   156  stopwatchscreen.o(SCREENDRAWS)
+    DRAW_START_BUTTON                        0x0800152f   Thumb Code    98  stopwatchscreen.o(SCREENDRAWS)
+    DRAW_STOP_BUTTON                         0x08001591   Thumb Code    80  stopwatchscreen.o(SCREENDRAWS)
+    DRAW_STOPWATCH_BUTTONS                   0x080015e1   Thumb Code    56  stopwatchscreen.o(SCREENDRAWS)
+    THEMES_TEXT                              0x08001655   Thumb Code    92  themes.o(SCREENDRAWS)
+    SCREENDRAWS                              0x08001654   Section      200  themes.o(SCREENDRAWS)
+    ALARM_TEXT                               0x0800171d   Thumb Code    98  alarmscreen.o(SCREENDRAWS)
+    SCREENDRAWS                              0x0800171c   Section      524  alarmscreen.o(SCREENDRAWS)
+    ALARM_TIMER                              0x0800177f   Thumb Code   156  alarmscreen.o(SCREENDRAWS)
+    DRAW_SET_BUTTON                          0x0800181b   Thumb Code    62  alarmscreen.o(SCREENDRAWS)
+    DRAW_RESET_BUTTON                        0x08001859   Thumb Code    98  alarmscreen.o(SCREENDRAWS)
+    DRAW_ALARM_BUTTONS                       0x080018bb   Thumb Code    56  alarmscreen.o(SCREENDRAWS)
+    SCREENDRAWS                              0x08001928   Section      472  omnitext.o(SCREENDRAWS)
+    DRAW_TEAM                                0x08001955   Thumb Code    80  omnitext.o(SCREENDRAWS)
+    DRAW_ULTIMATE                            0x080019a5   Thumb Code   152  omnitext.o(SCREENDRAWS)
+    DRAW_OMNITRIX                            0x08001a3d   Thumb Code   152  omnitext.o(SCREENDRAWS)
+    GAME_TEXT                                0x08001b01   Thumb Code    78  games.o(SCREENDRAWS)
+    SCREENDRAWS                              0x08001b00   Section      376  games.o(SCREENDRAWS)
+    DRAW_GAME_ONE_BUTTON                     0x08001b4f   Thumb Code    98  games.o(SCREENDRAWS)
+    DRAW_GAME_TWO_BUTTON                     0x08001bb1   Thumb Code    98  games.o(SCREENDRAWS)
+    DRAW_GAME_BUTTONS                        0x08001c13   Thumb Code    56  games.o(SCREENDRAWS)
+    SNAKE_CODE                               0x08001c78   Section      454  snakegame.o(SNAKE_CODE)
+    DRAW_CRABBY_PATY                         0x08001d5f   Thumb Code   106  snakegame.o(SNAKE_CODE)
+    DRAW_NEW_SNAKE                           0x08001dc9   Thumb Code   118  snakegame.o(SNAKE_CODE)
+    SNAKE_CODE                               0x08001e40   Section      598  snakehigherlevel.o(SNAKE_CODE)
+    DRAW_BORDERS_OF_DANGER_ZONE              0x08001fd5   Thumb Code    72  snakehigherlevel.o(SNAKE_CODE)
+    DRAW_NEW_SNAKE                           0x0800201d   Thumb Code   122  snakehigherlevel.o(SNAKE_CODE)
+    START_SIGNAL                             0x08002099   Thumb Code    84  tempandhum.o(TEMPANDHUM)
+    TEMPANDHUM                               0x08002098   Section      744  tempandhum.o(TEMPANDHUM)
+    DHT11_ACK                                0x080020ed   Thumb Code   128  tempandhum.o(TEMPANDHUM)
+    DHT11_DATA                               0x0800216d   Thumb Code   122  tempandhum.o(TEMPANDHUM)
+    CHECK_INPUT_INVERTED                     0x080021e7   Thumb Code    34  tempandhum.o(TEMPANDHUM)
+    CONVERSION_HEXA_DECIMEL_TEMP             0x080022b3   Thumb Code   142  tempandhum.o(TEMPANDHUM)
+    SEPERATE_TEMP_HUM                        0x08002341   Thumb Code    40  tempandhum.o(TEMPANDHUM)
+    CharacterBitmaps1                        0x08002380   Section     6822  bitmap_partone.o(CharacterBitmaps1)
+    CharacterBitmaps2                        0x08003e28   Section     8404  bitmap_parttwo.o(CharacterBitmaps2)
+    IconsBitmaps                             0x08005efc   Section     1200  iconsbitmap.o(IconsBitmaps)
+    MYDATA                                   0x080063ac   Section      640  iconstwo.o(MYDATA)
+    Heap_Mem                                 0x20000000   Data         512  startup_stm32f10x_md.o(HEAP)
+    HEAP                                     0x20000000   Section      512  startup_stm32f10x_md.o(HEAP)
+    Stack_Mem                                0x20000200   Data        1024  startup_stm32f10x_md.o(STACK)
+    STACK                                    0x20000200   Section     1024  startup_stm32f10x_md.o(STACK)
+    __initial_sp                             0x20000600   Data           0  startup_stm32f10x_md.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$P$D$K$B$S$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$~IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$ROPI$EBA8$STANDARDLIB$REQ8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __Vectors_Size                           0x000000ec   Number         0  startup_stm32f10x_md.o ABSOLUTE
+    __Vectors                                0x08000000   Data           4  startup_stm32f10x_md.o(RESET)
+    Reset_Handler                            0x080000ed   Thumb Code     8  startup_stm32f10x_md.o(.text)
+    __Vectors_End                            0x080000ec   Data           0  startup_stm32f10x_md.o(RESET)
+    NMI_Handler                              0x080000f5   Thumb Code     2  startup_stm32f10x_md.o(.text)
+    HardFault_Handler                        0x080000f7   Thumb Code     2  startup_stm32f10x_md.o(.text)
+    MemManage_Handler                        0x080000f9   Thumb Code     2  startup_stm32f10x_md.o(.text)
+    BusFault_Handler                         0x080000fb   Thumb Code     2  startup_stm32f10x_md.o(.text)
+    UsageFault_Handler                       0x080000fd   Thumb Code     2  startup_stm32f10x_md.o(.text)
+    SVC_Handler                              0x080000ff   Thumb Code     2  startup_stm32f10x_md.o(.text)
+    DebugMon_Handler                         0x08000101   Thumb Code     2  startup_stm32f10x_md.o(.text)
+    PendSV_Handler                           0x08000103   Thumb Code     2  startup_stm32f10x_md.o(.text)
+    SysTick_Handler                          0x08000105   Thumb Code     2  startup_stm32f10x_md.o(.text)
+    ADC1_2_IRQHandler                        0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    CAN1_RX1_IRQHandler                      0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    CAN1_SCE_IRQHandler                      0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    DMA1_Channel1_IRQHandler                 0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    DMA1_Channel2_IRQHandler                 0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    DMA1_Channel3_IRQHandler                 0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    DMA1_Channel4_IRQHandler                 0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    DMA1_Channel5_IRQHandler                 0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    DMA1_Channel6_IRQHandler                 0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    DMA1_Channel7_IRQHandler                 0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI0_IRQHandler                         0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI15_10_IRQHandler                     0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI1_IRQHandler                         0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI2_IRQHandler                         0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI3_IRQHandler                         0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI4_IRQHandler                         0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI9_5_IRQHandler                       0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    FLASH_IRQHandler                         0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    I2C1_ER_IRQHandler                       0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    I2C1_EV_IRQHandler                       0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    I2C2_ER_IRQHandler                       0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    I2C2_EV_IRQHandler                       0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    PVD_IRQHandler                           0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    RCC_IRQHandler                           0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    RTCAlarm_IRQHandler                      0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    RTC_IRQHandler                           0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    SPI1_IRQHandler                          0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    SPI2_IRQHandler                          0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TAMPER_IRQHandler                        0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TIM1_BRK_IRQHandler                      0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TIM1_CC_IRQHandler                       0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TIM1_TRG_COM_IRQHandler                  0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TIM1_UP_IRQHandler                       0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TIM2_IRQHandler                          0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TIM3_IRQHandler                          0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TIM4_IRQHandler                          0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    USART1_IRQHandler                        0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    USART2_IRQHandler                        0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    USART3_IRQHandler                        0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    USBWakeUp_IRQHandler                     0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    USB_HP_CAN1_TX_IRQHandler                0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    USB_LP_CAN1_RX0_IRQHandler               0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    WWDG_IRQHandler                          0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    __user_initial_stackheap                 0x08000109   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    __use_two_region_memory                  0x0800012d   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_escrow$2region                 0x0800012f   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_expand$2region                 0x08000131   Thumb Code     2  heapauxi.o(.text)
+    SystemInit                               0x08000261   Thumb Code   102  system_stm32f10x.o(.text.SystemInit)
+    READ_BUTTONS                             0x0800042d   Thumb Code    24  buttons.o(BUTTONS)
+    READ_IR_BUTTONS                          0x08000445   Thumb Code   334  buttons.o(BUTTONS)
+    GET_READINGS                             0x0800061b   Thumb Code     8  buttons.o(BUTTONS)
+    DRAW_LINE_HORIZONTAL                     0x08000661   Thumb Code    16  draws.o(DRAWS)
+    DRAW_RECTANGLE_FILLED                    0x08000671   Thumb Code    60  draws.o(DRAWS)
+    DRAW_CHAR                                0x08000725   Thumb Code    58  draws.o(DRAWS)
+    DRAW_CHAR_I                              0x0800075f   Thumb Code    58  draws.o(DRAWS)
+    DRAW_CHAR_M                              0x08000799   Thumb Code    58  draws.o(DRAWS)
+    COUNTER                                  0x080007d3   Thumb Code     8  draws.o(DRAWS)
+    DRAW_NUMBERS                             0x080007db   Thumb Code   130  draws.o(DRAWS)
+    DRAW_DIGIT_PAIR                          0x0800085d   Thumb Code    42  draws.o(DRAWS)
+    SIMPLE_ANIMATION                         0x08000887   Thumb Code   108  draws.o(DRAWS)
+    DRAW_ICON_OP                             0x080008f3   Thumb Code    76  draws.o(DRAWS)
+    DRAW_ICON_OPS                            0x08000979   Thumb Code    76  draws.o(DRAWS)
+    HELLO_SCREEN                             0x080009ed   Thumb Code    12  integration.o(INTEGRATION)
+    OMNITREX_SCREEN                          0x080009f9   Thumb Code    22  integration.o(INTEGRATION)
+    HOME_SCREEN                              0x08000a0f   Thumb Code     8  integration.o(INTEGRATION)
+    SCREEN_MAIN                              0x08000a17   Thumb Code    22  integration.o(INTEGRATION)
+    SCREEN_ALARM                             0x08000a2d   Thumb Code    18  integration.o(INTEGRATION)
+    SCREEN_STOPWATCH                         0x08000a3f   Thumb Code    18  integration.o(INTEGRATION)
+    SCREEN_THEMES                            0x08000a51   Thumb Code   328  integration.o(INTEGRATION)
+    SCREEN_GAMES                             0x08000b99   Thumb Code   244  integration.o(INTEGRATION)
+    __main                                   0x08000d09   Thumb Code   170  tft.o(MYCODE)
+    LCD_WRITE                                0x08000db3   Thumb Code    38  tft.o(MYCODE)
+    LCD_COMMAND_WRITE                        0x08000dd9   Thumb Code    28  tft.o(MYCODE)
+    LCD_DATA_WRITE                           0x08000df5   Thumb Code    28  tft.o(MYCODE)
+    delay_1_second                           0x08000f41   Thumb Code    22  tft.o(MYCODE)
+    delay_half_second                        0x08000f57   Thumb Code     0  tft.o(MYCODE)
+    BOX_EXPANSION                            0x08000fb9   Thumb Code    80  screens_draws.o(SCREENDRAWS)
+    DRAW_BEN10_SCREEN                        0x08001009   Thumb Code   208  screens_draws.o(SCREENDRAWS)
+    DRAW_HOME_SCREEN                         0x08001313   Thumb Code    16  screens_draws.o(SCREENDRAWS)
+    HOME_INTERFACE                           0x0800135b   Thumb Code    34  screens_draws.o(SCREENDRAWS)
+    STOPWATCH_INTERFACE                      0x0800137d   Thumb Code    34  screens_draws.o(SCREENDRAWS)
+    ALARM_INTERFACE                          0x0800139f   Thumb Code    34  screens_draws.o(SCREENDRAWS)
+    THEMES_INTERFACE                         0x080013c1   Thumb Code    34  screens_draws.o(SCREENDRAWS)
+    GAMES_INTERFACE                          0x080013e3   Thumb Code    34  screens_draws.o(SCREENDRAWS)
+    DRAW_STOPWATCH_SCREEN                    0x08001619   Thumb Code    20  stopwatchscreen.o(SCREENDRAWS)
+    DRAW_THEMES_SCREEN                       0x080016b1   Thumb Code    88  themes.o(SCREENDRAWS)
+    DRAW_ALARM_SCREEN                        0x080018f3   Thumb Code    20  alarmscreen.o(SCREENDRAWS)
+    DRAW_INTRO_SCREEN                        0x08001929   Thumb Code    44  omnitext.o(SCREENDRAWS)
+    DRAW_GAME_SCREEN                         0x08001c4b   Thumb Code    16  games.o(SCREENDRAWS)
+    SNAKE_GAME                               0x08001c79   Thumb Code   230  snakegame.o(SNAKE_CODE)
+    SNAKE_GAME_HIGHER_LEVEL                  0x08001e41   Thumb Code   298  snakehigherlevel.o(SNAKE_CODE)
+    GET_TEMPRATURE_AND_HUMIDITY_VALUE        0x0800226b   Thumb Code    72  tempandhum.o(TEMPANDHUM)
+    CharA                                    0x08002380   Data          18  bitmap_partone.o(CharacterBitmaps1)
+    CharB                                    0x08002566   Data          18  bitmap_partone.o(CharacterBitmaps1)
+    CharC                                    0x0800274c   Data          18  bitmap_partone.o(CharacterBitmaps1)
+    CharE                                    0x08002932   Data          18  bitmap_partone.o(CharacterBitmaps1)
+    CharG                                    0x08002b18   Data          18  bitmap_partone.o(CharacterBitmaps1)
+    CharH                                    0x08002cfe   Data          18  bitmap_partone.o(CharacterBitmaps1)
+    CharI                                    0x08002ee4   Data          12  bitmap_partone.o(CharacterBitmaps1)
+    CharL                                    0x0800320e   Data          18  bitmap_partone.o(CharacterBitmaps1)
+    CharM                                    0x08003406   Data          24  bitmap_partone.o(CharacterBitmaps1)
+    CharN                                    0x0800368e   Data          18  bitmap_partone.o(CharacterBitmaps1)
+    CharO                                    0x08003874   Data          18  bitmap_partone.o(CharacterBitmaps1)
+    CharP                                    0x08003a5a   Data          18  bitmap_partone.o(CharacterBitmaps1)
+    CharR                                    0x08003c40   Data          18  bitmap_partone.o(CharacterBitmaps1)
+    CharS                                    0x08003e28   Data          18  bitmap_parttwo.o(CharacterBitmaps2)
+    CharT                                    0x0800400e   Data          18  bitmap_parttwo.o(CharacterBitmaps2)
+    CharU                                    0x080041f4   Data          18  bitmap_parttwo.o(CharacterBitmaps2)
+    CharX                                    0x080043da   Data          18  bitmap_parttwo.o(CharacterBitmaps2)
+    Char0                                    0x080045c0   Data          18  bitmap_parttwo.o(CharacterBitmaps2)
+    Char1                                    0x080047a6   Data          18  bitmap_parttwo.o(CharacterBitmaps2)
+    Char2                                    0x0800498c   Data          18  bitmap_parttwo.o(CharacterBitmaps2)
+    Char3                                    0x08004b72   Data          18  bitmap_parttwo.o(CharacterBitmaps2)
+    Char4                                    0x08004d58   Data          18  bitmap_parttwo.o(CharacterBitmaps2)
+    Char5                                    0x08004f3e   Data          18  bitmap_parttwo.o(CharacterBitmaps2)
+    Char6                                    0x08005124   Data          18  bitmap_parttwo.o(CharacterBitmaps2)
+    Char7                                    0x0800530a   Data          18  bitmap_parttwo.o(CharacterBitmaps2)
+    Char8                                    0x080054f0   Data          18  bitmap_parttwo.o(CharacterBitmaps2)
+    Char9                                    0x080056d6   Data          18  bitmap_parttwo.o(CharacterBitmaps2)
+    HomeIcon                                 0x08005efc   Data           5  iconsbitmap.o(IconsBitmaps)
+    SunIcon                                  0x08005fc4   Data           5  iconsbitmap.o(IconsBitmaps)
+    SettingIcon                              0x0800608c   Data           5  iconsbitmap.o(IconsBitmaps)
+    JoyStiick                                0x08006154   Data           5  iconsbitmap.o(IconsBitmaps)
+    Controller                               0x0800621c   Data           5  iconsbitmap.o(IconsBitmaps)
+    DropIcon                                 0x080062e4   Data           5  iconsbitmap.o(IconsBitmaps)
+    Stopwatch                                0x080063ac   Data           5  iconstwo.o(MYDATA)
+    Alarm                                    0x08006474   Data           5  iconstwo.o(MYDATA)
+    ArrowSelect                              0x0800653c   Data           3  iconstwo.o(MYDATA)
+    UpArrow                                  0x080065f0   Data           3  iconstwo.o(MYDATA)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x080000ed
+
+  Load Region LR_1 (Base: 0x08000000, Size: 0x0000662c, Max: 0xffffffff, ABSOLUTE)
+
+    Execution Region ER_RO (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x0000662c, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x08000000   0x08000000   0x000000ec   Data   RO           97    RESET               startup_stm32f10x_md.o
+    0x080000ec   0x080000ec   0x00000040   Code   RO           98  * .text               startup_stm32f10x_md.o
+    0x0800012c   0x0800012c   0x00000006   Code   RO          121    .text               c_w.l(heapauxi.o)
+    0x08000132   0x08000132   0x00000002   PAD
+    0x08000134   0x08000134   0x00000008   Code   RO          105    .text.SetSysClock   system_stm32f10x.o
+    0x0800013c   0x0800013c   0x00000122   Code   RO          109    .text.SetSysClockTo72  system_stm32f10x.o
+    0x0800025e   0x0800025e   0x00000002   PAD
+    0x08000260   0x08000260   0x00000066   Code   RO          103    .text.SystemInit    system_stm32f10x.o
+    0x080002c6   0x080002c6   0x00000002   PAD
+    0x080002c8   0x080002c8   0x00000360   Code   RO           17    BUTTONS             buttons.o
+    0x08000628   0x08000628   0x000003c4   Code   RO           11    DRAWS               draws.o
+    0x080009ec   0x080009ec   0x0000031c   Code   RO           34    INTEGRATION         integration.o
+    0x08000d08   0x08000d08   0x000002b0   Code   RO            2    MYCODE              tft.o
+    0x08000fb8   0x08000fb8   0x0000048c   Code   RO           46    SCREENDRAWS         screens_draws.o
+    0x08001444   0x08001444   0x00000210   Code   RO           51    SCREENDRAWS         stopwatchscreen.o
+    0x08001654   0x08001654   0x000000c8   Code   RO           56    SCREENDRAWS         themes.o
+    0x0800171c   0x0800171c   0x0000020c   Code   RO           61    SCREENDRAWS         alarmscreen.o
+    0x08001928   0x08001928   0x000001d8   Code   RO           66    SCREENDRAWS         omnitext.o
+    0x08001b00   0x08001b00   0x00000178   Code   RO           71    SCREENDRAWS         games.o
+    0x08001c78   0x08001c78   0x000001c6   Code   RO           29    SNAKE_CODE          snakegame.o
+    0x08001e3e   0x08001e3e   0x00000002   PAD
+    0x08001e40   0x08001e40   0x00000256   Code   RO           76    SNAKE_CODE          snakehigherlevel.o
+    0x08002096   0x08002096   0x00000002   PAD
+    0x08002098   0x08002098   0x000002e8   Code   RO           39    TEMPANDHUM          tempandhum.o
+    0x08002380   0x08002380   0x00001aa6   Data   RO            8    CharacterBitmaps1   bitmap_partone.o
+    0x08003e26   0x08003e26   0x00000002   PAD
+    0x08003e28   0x08003e28   0x000020d4   Data   RO            9    CharacterBitmaps2   bitmap_parttwo.o
+    0x08005efc   0x08005efc   0x000004b0   Data   RO           43    IconsBitmaps        iconsbitmap.o
+    0x080063ac   0x080063ac   0x00000280   Data   RO           44    MYDATA              iconstwo.o
+
+
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x0800662c, Size: 0x00000000, Max: 0xffffffff, ABSOLUTE)
+
+    **** No section assigned to this execution region ****
+
+
+    Execution Region ER_ZI (Exec base: 0x20000000, Load base: 0x0800662c, Size: 0x00000600, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000        -       0x00000200   Zero   RW           96    HEAP                startup_stm32f10x_md.o
+    0x20000200        -       0x00000400   Zero   RW           95    STACK               startup_stm32f10x_md.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       524         34          0          0          0        688   alarmscreen.o
+         0          0       6822          0          0          0   bitmap_partone.o
+         0          0       8404          0          0          0   bitmap_parttwo.o
+       864         52          0          0          0       1144   buttons.o
+       964         40          0          0          0       1244   draws.o
+       376         30          0          0          0        608   games.o
+         0          0       1200          0          0          0   iconsbitmap.o
+         0          0        640          0          0          0   iconstwo.o
+       796          8          0          0          0        920   integration.o
+       472         44          0          0          0        580   omnitext.o
+      1164         64          0          0          0       1168   screens_draws.o
+       454          0          0          0          0        556   snakegame.o
+       598          0          0          0          0        692   snakehigherlevel.o
+        64         26        236          0       1536        800   startup_stm32f10x_md.o
+       528         40          0          0          0        720   stopwatchscreen.o
+       400          0          0          0          0       2986   system_stm32f10x.o
+       744         46          0          0          0        952   tempandhum.o
+       688         32          0          0          0        864   tft.o
+       200         20          0          0          0        424   themes.o
+
+    ----------------------------------------------------------------------
+      8844        436      17304          0       1536      14346   Object Totals
+         0          0          0          0          0          0   (incl. Generated)
+         8          0          2          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         6          0          0          0          0        152   heapauxi.o
+
+    ----------------------------------------------------------------------
+         8          0          0          0          0        152   Library Totals
+         2          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+         6          0          0          0          0        152   c_w.l
+
+    ----------------------------------------------------------------------
+         8          0          0          0          0        152   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      8852        436      17304          0       1536      13822   Grand Totals
+      8852        436      17304          0       1536      13822   ELF Image Totals
+      8852        436      17304          0          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                26156 (  25.54kB)
+    Total RW  Size (RW Data + ZI Data)              1536 (   1.50kB)
+    Total ROM Size (Code + RO Data + RW Data)      26156 (  25.54kB)
+
+==============================================================================
+
